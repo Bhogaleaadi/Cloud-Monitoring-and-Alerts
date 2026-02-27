@@ -24,32 +24,37 @@ This instance serves as the monitored cloud resource.
 
 ![Bucket Created](Images/1a.png)
 
-
+![Bucket Created](Images/1b.png)
 _________________________________________________________________________________________________________________________________
 2️⃣ Simulating High CPU Utilization To test monitoring and alerting, high CPU usage was intentionally generated using the following command in the EC2 Bash terminal:
 
 ``bash yes > /dev/null & This command continuously consumes CPU resources, allowing the alarm to be triggered.
 
+![Bucket Created](Images/2a.png)
 _________________________________________________________________________________________________________________________________
 3️⃣ Creating CloudWatch Alarm A CloudWatch alarm was configured with the following parameters: • Metric: CPU Utilization • Threshold: CPU utilization greater than defined limit • Evaluation Period: Continuous monitoring • Action: Send notification via email
 
-
+![Bucket Created](Images/3a.png)
 ________________________________________________________________________________________________________________________________
 4️⃣ Email Notification Triggered When CPU utilization crossed the threshold, an email notification was sent to the registered email address using Amazon SNS.
 
-
+![Bucket Created](Images/4a.png)
 _________________________________________________________________________________________________________________________________
 5️⃣ Alarm State Change The alarm state changed from OK to In Alarm as CPU usage remained high, indicating successful alert triggering.
 
-
+![Bucket Created](Images/5a.png)
 _________________________________________________________________________________________________________________________________
 6️⃣ High CPU Utilization Warning CloudWatch displayed a warning indicating high CPU utilization for the EC2 instance, confirming abnormal resource usage.
 
+![Bucket Created](Images/6a.png)
 
+![Bucket Created](Images/6b.png)
 _________________________________________________________________________________________________________________________________
 7️⃣ Metric Graph Visualization The CPU utilization metric was visualized using CloudWatch graphs, showing a clear spike in usage during the test period.
 
+![Bucket Created](Images/7a.png)
 
+![Bucket Created](Images/7b.png)
 _________________________________________________________________________________________________________________________________
 📊 Results The EC2 instance was successfully monitored using AWS CloudWatch. High CPU utilization was detected, alarms were triggered correctly, and notifications were delivered via email. Metric graphs clearly showed the increase in CPU usage, validating the monitoring setup.
 
